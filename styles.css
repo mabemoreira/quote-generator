@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&display=swap');
+
+:root{
+    --cor-fundo: #f3f3f3;
+    --cor-texto: #E75480;
+    --fonte-principal: 'Baloo Bhaina 2', sans-serif;
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--cor-fundo);
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffc5d3' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    color: var(--cor-texto);
+    font-family: var(--fonte-principal);
+    text-align: center;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-container{
+    width: auto;
+    max-width: 900px;
+    padding: 20px, 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 10px 10px rgba(0,0,0,0.2);
+}
+
+.quote-text{
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.long-quote{
+    font-size: 2rem;
+}
+
+.fa-quote-left{
+    font-size: 4rem;
+}
+
+
+.quote-author{
+    margin-top: 15px;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+.buttons-container{
+    margin: 15px;
+    display:flex;
+    justify-content: space-between;
+}
+
+button{
+    cursor: pointer;
+    height: 3rem;
+    border: none;
+    border-radius: 10px;
+    color: var(--cor-fundo);
+    background-color: var(--cor-texto);
+    outline: none;
+    padding: 0.3rem 1.8rem;
+    box-shadow: 0 0.3rem rgba(121,121,121,0.65);
+    font-family: var(--fonte-principal);
+    font-size: 1.3rem;
+}
+
+
+.fa-x-twitter{
+    font-size: 1.5rem;
+}
+
+button:hover{
+    filter:brightness(1.1);
+}
+
+button:active{
+    transform:translate(0,0.3rem);
+    box-shadow: 0 0.1rem rgba(121,121,121,0.65);
+    filter:brightness(1);
+}
+
+
+@media screen and (max-width: 1000px){
+    .quote-container{
+        margin: auto 10px;
+    }
+
+    .quote-text{
+        font-size: 2.5rem;
+    }
+}
