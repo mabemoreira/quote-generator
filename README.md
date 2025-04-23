@@ -5,3 +5,5 @@ Olá! Nessa semana estou focada em aprender JS, então como já tinha uma base, 
 No futuro gostaria de ter minha própria API de frases para que eu pudesse customizar
 
 Você pode ver o projeto final [aqui](https://mabemoreira.github.io/quote-generator/)
+
+O projeto é responsivo, então tente entrar em devices diferentes!
