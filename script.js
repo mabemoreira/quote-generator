@@ -18,22 +18,34 @@ function complete(){
 }
 
 function newQuote() {
-    //picks random quotes from the array 
-    loading();
-    const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
-    //check if author is blank, replace with unknown
-    authorText.textContent = quote.author ? quote.author : 'Unknown';
-
-    if(quote.text.length > 120){
-        quoteText.classList.add('long-quote');
+    let calls = 0;
+    try{
+        loading();
+        const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
+        //check if author is blank, replace with unknown
+        authorText.textContent = quote.author ? quote.author : 'Unknown';
+    
+        if(quote.text.length > 120){
+            quoteText.classList.add('long-quote');
+        }
+        else{
+            quoteText.classList.remove('long-quote'); // como quote text é global, se na outra chamada tinha adicionado long-quote vamos remover
+        }
+       
+    
+        quoteText.textContent = quote.text
+        complete();
     }
-    else{
-        quoteText.classList.remove('long-quote'); // como quote text é global, se na outra chamada tinha adicionado long-quote vamos remover
+    catch (error){
+        if (calls == 10){
+            alert('Error fetching quotes: ' + error);
+        }
+        else{
+            calls++;
+            newQuote();
+        }
     }
    
-
-    quoteText.textContent = quote.text
-    complete();
 
 }
 
